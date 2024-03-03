@@ -19,6 +19,9 @@ export class SearchBoxComponent implements OnInit, OnDestroy {
 
   @Input()
   public placeholder: string = '';
+
+  @Input()
+  public initialValue: string = '';
   @Output()
   public onValue = new EventEmitter<string>();
 
@@ -26,10 +29,12 @@ export class SearchBoxComponent implements OnInit, OnDestroy {
   public onDebounce = new EventEmitter<string>();
 
   ngOnInit(): void {
-    this.debouncerSuscription = this.debouncer.pipe(debounceTime(300)).subscribe((value) => {
-      // console.log('debouncer value', value);
-      this.onDebounce.emit(value);
-    });
+    this.debouncerSuscription = this.debouncer
+      .pipe(debounceTime(300))
+      .subscribe((value) => {
+        // console.log('debouncer value', value);
+        this.onDebounce.emit(value);
+      });
   }
 
   emitValue(value: string): void {

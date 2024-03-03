@@ -1,33 +1,23 @@
 import { Component } from '@angular/core';
-import { Pais } from '../../interfaces/pais';
 import { CountriesService } from '../../services/countries.service';
 import { Country } from '../../interfaces/country';
 
 @Component({
   selector: 'app-by-country-page',
   templateUrl: './by-country-page.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class ByCountryPageComponent {
-
   public countries: Country[] = [];
 
-  constructor(private countriesService:CountriesService){}
+  constructor(private countriesService: CountriesService) {}
 
-
-
-  searchByCountry(term:string){
+  searchByCountry(term: string) {
     console.log(term);
 
-    this.countriesService.searchCountry(term).subscribe((data)=>{
+    this.countriesService.searchCountry(term).subscribe((data) => {
       console.log(data);
-      this.countries = data
-
-    })
-
-
-
+      this.countries = data;
+    });
   }
-
 }
