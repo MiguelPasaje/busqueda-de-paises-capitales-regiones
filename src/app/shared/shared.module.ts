@@ -26,6 +26,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     HomePageComponent,
     SearchBoxComponent,
     SidebarComponent,
+    LoadingSpinerComponent,
   ],
 })
 export class SharedModule {}
