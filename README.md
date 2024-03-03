@@ -1,4 +1,15 @@
-# CountryApp
+# CountryApp SPA
+
+esta app utliza la api:https://restcountries.com/
+permite buscar por diferentes parametros, en este caso la busqueda es por país,capital o región
+
+- En esta app se orienta al manejo de rutas (routing)
+- Emision y resepcion de datos de un compónente a otro
+- Mantener la data persistente al cambiar de componente con el serviciom ademas se utiliza localStore para guardar la data al recargar el navegador.
+- - LazyLoad (carga peresoza)
+- - Tambien se integran otras funcionalidades como:
+- - Loading
+- - rxjs(pipe,map,tap, Observable, of, switchMap, catchError,delay, Subject, Subscription, debounceTime)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
 
